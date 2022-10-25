@@ -36,9 +36,9 @@ def monoToStereo(input_file, out_file, swap):
         os.remove(out_file)
     # mono slectin number of channels (ac)
     if swap:
-        command = 'ffmpeg -i ' + input_file + "-c:v copy -ac 1 " + "mono_" + out_file
+        command = 'ffmpeg -i ' + input_file + " -c:v copy -ac 1 " + "mono_" + out_file
     else:
-        command = 'ffmpeg -i ' + input_file + "-c:v copy -ac 2 " + "stereo_" + out_file
+        command = 'ffmpeg -i ' + input_file + " -c:v copy -ac 2 " + "stereo_" + out_file
     print(command)
     os.system(command)
 
